@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Stories</title>
+    <% include partials/head.ejs %>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <% include partials/sidebarMenu.ejs %>
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                       <a href="#menu-toggle" class="btn btn-success" id="menu-toggle">Toggle Screen</a><br/><br/>
+                        <% if( typeof(stories) !== 'undefined' ) {%>
+
+                           <% for(var i=0; i < stories.length; i++) { %>
+                               <h1><%- stories[i].title %></h1>
+                               <h4>Created by <code><%=stories[i].author%> on <%-stories[i].created_at.toUTCString()  %> </code></h4><br/><br/>
+                               <p><%- stories[i].summary %>  <b>- Read the full story <a href='/stories/<%- stories[i].slug%>'>here</a> </b></p>
+
+                               <br/><br/>
+                           <% } %>
+                        <%}%>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <% include partials/jsIncludes.ejs %>
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

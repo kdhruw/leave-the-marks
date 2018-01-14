@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>500: Developer's Fault</title>
+    <% include partials/head.ejs %>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+      <div id="sidebar-wrapper">
+             <ul class="sidebar-nav">
+                  <br/>
+                  <li class="sidebar-brand">
+                      <a class="brandFont" align="center" href="/">
+                        Leave the marks !!!
+                      </a>
+                  </li>
+                  <br/>
+
+                  <div align="center">
+                  <img class="img-circle" src="/images/logo.png"/>
+                  </div>
+                  <br/>
+
+                  <li>
+                   <a class="menus" align="center" href="/stories">Stories</a>
+                  </li>
+                  <li>
+                   <a class="menus" align="center" href="/new-story">Share your own story</a>
+                  </li>
+                  <li>
+                   <a class="menus" align="center" href="/techStack">Tech stack</a>
+                  </li>
+
+                  <br/><br/><br/>
+                  <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <a type="button" href="/login" class="btn btn-primary btn-lg outline">Login</a>&nbsp;&nbsp;&nbsp;
+                   <a type="button" href="/register" class="btn btn-danger btn-lg outline">Sign Up</a>
+                 </div>
+
+
+          </ul>
+      </div>
+
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+
+                      <p align="center" class="headingFont">
+                        Leave the marks !!!
+                      </p>
+                      <br/><br/><br/>
+
+                   <blockquote class="mainLines">
+                  <code>Yikes !!! something went wrong as you tried to access this page</code>
+                  Probably this happened because there are some bugs in the application
+                  </blockquote>
+
+                 <blockquote class="mainLines">
+                  We are extremely sorry for the inconvenience caused, please forgive us
+                 </blockquote>
+
+
+                  </div>
+           </div>
+         </div>
+      </div>
+
+
+  </div>
+
+  <% include partials/jsIncludes.ejs %>
+
+</body>
+
+</html>
